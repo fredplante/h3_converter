@@ -29,7 +29,7 @@ coordToH3Form.onsubmit = function(event) {
     var result = document.createElement('strong')
 
     result.appendChild(document.createTextNode(index));
-    li.appendChild(document.createTextNode('Resolution :' + resolution + ': '));
+    li.appendChild(document.createTextNode('Resolution ' + resolution + ': '));
     li.appendChild(result);
     list.appendChild(li);
   }
