@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>H3 converter</title>
+  <meta name="description" content="H3 converter">
+</head>
+
+<body>
+  <h1>H3 Converter</h1>
+
+  <section>
+    <h2>Convert coordinates to H3 index</h2>
+
+    <form id="coord_to_h3">
+      <label for="latitude">Latitude</label>
+      <input type="text" id="latitude">
+      <label for="longitude">Longitude</label>
+      <input type="text" id="longitude">
+      <input type="submit">
+      <input type="reset">
+    </form>
+
+    <p style="display: none;" id="invalid_coordinates">
+      <em style="color: red">Invalid coordinates</em>
+    </p>
+
+    <section id="indexes_results" style="display: none;">
+      <h3>Results</h3>
+      <a href="" target="_blank" id="view_coordinates_1">View coordinates on map</a>
+      <h4>Indexes</h4>
+      <ul id="indexes_results_list"></ul>
+    </section>
+  </section>
+
+  <section>
+    <h2>Convert H3 index to hexagon center coordinates</h2>
+
+    <form id="h3_to_coord">
+      <label for="index">Index</label>
+      <input type="text" id="index">
+      <input type="submit">
+      <input type="reset">
+    </form>
+
+    <p style="display: none;" id="invalid_index">
+      <em style="color: red">Invalid H3 index</em>
+    </p>
+
+    <section id="index_result" style="display: none;">
+      <h3>Results</h3>
+      <a href="" target="_blank" id="view_coordinates_2">View coordinates on map</a>
+      <ul>
+        <li>Resolution: <strong id="index_resolution"></strong></li>
+        <li>Latitude: <strong id="index_latitude"></strong></li>
+        <li>Longitude: <strong id="index_longitude"></strong></li>
+      </ul>
+    </section>
+
+  <script src="https://unpkg.com/h3-js@3.7.1"></script>
+  <script src="script.js"></script>
+</body>
+</html>
